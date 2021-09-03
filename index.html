@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Generate Random Number 1 to 100</h2>
+
+
+         <p  style="text-align: center;" >Random Number</p>
+         <p id="demo" style="text-align: center;" ></p>
+         <button id="btn" style="background-color: red;margin-left: 46%;" onclick="button()">random</button>
+
+        <br><br>
+         <hr>
+         <h2> Read 'N' names and sort the names in ascending and descending order.</h2>
+         <p id="p" style="text-align: center;"></p>
+         <p id="p1" style="text-align: center;"></p>
+         <p id="p2" style="text-align: center;"></p>
+         <input type="text" id="t1" placeholder="enter names" style="margin-left: 45%;">
+         <br><br>
+         <button id="btn"style="background-color: red;margin-left: 47%;" onclick="f1()">add</button><br><br>
+         <button id="btn"style="background-color: red;margin-left: 45%;" onclick="f2()">Ascending</button><br><br>
+         <button id="btn"style="background-color: red;margin-left: 45%;" onclick="f3()">Descending</button><br><br>
+        
+
+         <br><br>
+         <hr>
+         <h2 > Write the JS program to demonstrate different mouse events.</h2>
+         <p id="l" style="text-align: center;">result</p>
+         <button id="btn1"style="background-color: red;margin-left: 45%;" >Single Click</button><br><br>
+         <button id="btn2"style="background-color: red;margin-left: 45%;" >Double click</button><br><br>
+         <p id="l2" style="text-align: center;">A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose,Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or theme. Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, and they also help readers process those thoughts effortlessly. Imagine how much harder reading and writing would be if everything was just one long block of text. 
+
+            There’s a lot of flexibility when it comes to writing paragraphs, but if there’s one steadfast rule, it’s this: Paragraphs should relate to one main topic or point. The paragraph itself often contains multiple points spanning several sentences, but they should all revolve around one core theme. Just as sentences build upon each other to communicate the paragraph’s core theme, paragraphs work together to communicate the core theme of the writing as a whole. 
+            
+            That’s the basic idea, but in practice there’s more to it. Let’s look at the four main types of paragraphs to learn how and when to use them. </p>
+ 
+<script>
+    function button(){
+        document.getElementById("demo").innerHTML =Math.floor(Math.random() * 100);
+    }
+
+    var a=[]
+    function f1(){
+        var push=document.getElementById("t1").value;
+        a.push(push);
+      
+        var element="";
+        for(i=0;i<a.length;i++){
+            element=element+a[i] + "<br/>" ;
+        }
+        document.getElementById('p').innerHTML=element;
+
+    }
+    function f2(){
+        document.getElementById('p1').innerHTML= a.sort();
+    }
+    function f3(){
+        document.getElementById('p2').innerHTML= a.reverse();
+    }
+       
+   let single =document.getElementById('btn1');
+   let double =document.getElementById('btn2');
+   btn1.onclick=function(){
+    document.getElementById('l').innerHTML= "Single click";
+   }
+   btn2.ondblclick=function(){
+    document.getElementById('l').innerHTML= "Double click";
+   }
+   l2.onmouseover=function(){
+    document.getElementById('l').innerHTML= "Mouse Over";
+   }
+ 
+   l2.onmouseout=function(){
+    document.getElementById('l').innerHTML= "Mouse out";
+   }
+   
+        
+ </script>
+
+</body>
+</html>
+</body>
+</html>
